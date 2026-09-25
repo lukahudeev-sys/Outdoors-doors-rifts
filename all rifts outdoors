@@ -1,0 +1,17 @@
+local DoorsNotify = loadstring(game:HttpGet("https://raw.githubusercontent.com/lukahudeev-sys/Purple-shakelight/refs/heads/main/achivement%20doors"))()
+
+DoorsNotify({
+    Style = "ACHIEVEMENT",
+    Title = "rifts was activated",
+    Description = "madded by lkagod x a-120",
+    Reason = "",
+    Image = "",
+    Time = 5
+})
+loadstring(game:HttpGet("https://raw.githubusercontent.com/lukahudeev-sys/Outdoors-doors-rifts/refs/heads/main/michevious%20outdoors"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/lukahudeev-sys/Outdoors-doors-rifts/refs/heads/main/viridis%20outdoor"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/lukahudeev-sys/Outdoors-doors-rifts/refs/heads/main/glitch%20rift%20outdoors"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/lukahudeev-sys/Outdoors-doors-rifts/refs/heads/main/moon%20outdoors"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/lukahudeev-sys/Outdoors-doors-rifts/refs/heads/main/michevious%20bundle%20outdoors"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/lukahudeev-sys/Outdoors-doors-rifts/refs/heads/main/starlight%20outdoor"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/lukahudeev-sys/Outdoors-doors-rifts/refs/heads/main/skin%20outdoors"))()
