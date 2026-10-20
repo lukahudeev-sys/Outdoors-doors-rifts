@@ -1,0 +1,114 @@
+-- This file was generated at discord.gg/syncrypt
+
+local unpack_ = unpack or table.unpack
+local Players = game:GetService("Players")
+
+game:GetService("RunService")
+Players = Players.LocalPlayer
+Players = Players.Character or Players.CharacterAdded:Wait()
+local HumanoidRootPart = Players:WaitForChild("HumanoidRootPart")
+
+for _, descendant in ipairs(Players:GetDescendants()) do
+    if descendant:IsA("BasePart") then
+        descendant.Transparency = 1
+        descendant.CastShadow = false
+    elseif descendant:IsA("Decal") or descendant:IsA("Texture") then
+        descendant.Transparency = 1
+    elseif descendant:IsA("ParticleEmitter") or (descendant:IsA("Trail") or (descendant:IsA("Beam") or (descendant:IsA("Fire") or (descendant:IsA("Smoke") or descendant:IsA("Sparkles"))))) then
+        descendant.Enabled = false
+    end
+end
+local parent = { pcall(function()
+    writefile("EyestalkMorph.rbxm", game:HttpGet("https://github.com/lukahudeev-sys/Outdoors-doors-rifts/blob/main/Eyestalk.rbxm"))
+end) }
+local v7 = parent[2]
+
+if not parent[1] then
+    warn("Failed to load .rbxm: " .. tostring(v7))
+
+    return
+end
+unpack_, parent = pcall(function()
+    return game:GetObjects(unpack_({ getcustomasset("EyestalkMorph.rbxm") }))[1]
+end)
+
+if not (unpack_ and parent) then
+    return
+end
+if Players:FindFirstChild("EyestalkMorph") then
+    Players.EyestalkMorph:Destroy()
+end
+parent.Name = "EyestalkMorph"
+parent.Parent = Players
+unpack_ = parent:IsA("Model")
+
+if unpack_ then
+    unpack_ = parent.PrimaryPart or (parent:FindFirstChild("HumanoidRootPart") or (parent:FindFirstChild("Root") or parent:FindFirstChildWhichIsA("BasePart")))
+end
+if unpack_ then
+    unpack_.CFrame = HumanoidRootPart.CFrame
+    Players = parent.GetDescendants
+
+    for _, v in ipairs(Players(parent)) do
+        if v:IsA("BasePart") then
+            v.Anchored = false
+            v.CanCollide = false
+            v.Massless = true
+        end
+    end
+
+    Players = Instance.new("Weld")
+    Players.Name = "MorphOffsetWeld"
+    Players.Part0 = HumanoidRootPart
+    Players.Part1 = unpack_
+    Players.C0 = CFrame.new(0, 1.1, 0)
+    Players.C1 = CFrame.new()
+    Players.Parent = HumanoidRootPart
+end
+unpack_ = parent.GetDescendants
+unpack_, Players, HumanoidRootPart = ipairs(unpack_(parent))
+
+while true do
+    HumanoidRootPart, v7 = unpack_(Players, HumanoidRootPart)
+
+    if not HumanoidRootPart then
+        break
+    end
+
+    if v7:IsA("Sound") then
+        if v7.Name == "Footsteps" or v7.Name == "FootstepsFar" then
+            v7.Looped = true
+            v7.Playing = true
+            v7:Play()
+        else
+            v7:Stop()
+            v7.Playing = false
+        end
+    end
+end
+unpack_ = parent:FindFirstChildOfClass("Humanoid") or parent:FindFirstChildOfClass("AnimationController")
+
+if not unpack_ then
+    unpack_ = Instance.new("AnimationController")
+    unpack_.Parent = parent
+end
+Players = unpack_:FindFirstChildOfClass("Animator")
+
+if Players then
+    unpack_ = Instance.new("Animation")
+    unpack_.AnimationId = "rbxassetid://139735485315405"
+    unpack_ = Players:LoadAnimation(unpack_)
+    unpack_.Looped = true
+    unpack_:Play()
+    print("Successfull")
+
+    return
+end
+Players = Instance.new("Animator")
+Players.Parent = unpack_
+unpack_ = Instance.new("Animation")
+unpack_.AnimationId = "rbxassetid://139735485315405"
+unpack_ = Players:LoadAnimation(unpack_)
+unpack_.Looped = true
+unpack_:Play()
+print("Successfull")
